@@ -1214,8 +1214,8 @@ section,
 
 .features .features-item .image-stack .stack-front {
   grid-row: 1;
-  grid-column: 1/span 8;
-  margin-top: 20%;
+  grid-column: 1/span 10;
+  margin-top: 5%;
   width: 100%;
   z-index: 2;
 }
