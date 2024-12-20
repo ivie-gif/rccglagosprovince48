@@ -61,7 +61,6 @@
           <ul>
             <li><a href="index.html#home" class="active">Home</a></li>
             <li><a href="index.html#about">About</a></li>
-            <!-- <li><a href="index.html#services">Services</a></li> -->
             <li><a href="index.html#departments">Departments</a></li>
             <li><a href="index.html#events">Events</a></li>
             <li><a href="index.html#ministries">Ministries</a></li>
@@ -479,11 +478,19 @@
               data-aos-delay="100"
             >
               <div class="image-stack">
-                <img
+                <!-- <img
                   src="assets/img/UPCOMINGEVENT.png"
                   alt=""
                   class="stack-front"
-                />
+                /> -->
+                <img
+                src="assets/img/UPCOMINGEVENT.png"
+                alt="Upcoming Event"
+                class="stack-front"
+                onclick="openModal(this)"
+              />
+              
+              
                 <img
                   src="assets/img/features-light-2.jpg"
                   alt=""
@@ -494,6 +501,12 @@
           </div>
         </div>
       </section>
+
+      <!-- Modal for upcoming event -->
+      <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImg" />
+      </div>
 
       <!-- Countdown section -->
       <!-- Stats Section -->
@@ -810,16 +823,6 @@
                     <p>rccglp48adm@gmail.com</p>
                   </div>
                 </div>
-                <!-- End Info Item -->
-
-                <!-- <div class="col-md-6">
-                  <div class="info-item" data-aos="fade" data-aos-delay="500">
-                    <i class="bi bi-clock"></i>
-                    <h3>Open Hours</h3>
-                    <p>Monday - Friday</p>
-                    <p>9:00AM - 05:00PM</p>
-                  </div>
-                </div> -->
                 <!-- End Info Item -->
               </div>
             </div>
