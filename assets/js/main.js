@@ -203,6 +203,68 @@ function closeModal() {
 window.openModal = openModal;
 window.closeModal = closeModal;
 
+
+
+
+
+
+
+
+
+// Excel sheet upload
+document.getElementById('upload').addEventListener('change', handleFile);
+
+function handleFile(event) {
+  const file = event.target.files[0];
+  const reader = new FileReader();
+
+  reader.onload = function (e) {
+    const data = new Uint8Array(e.target.result);
+    const workbook = XLSX.read(data, { type: 'array' });
+    const sheetName = workbook.SheetNames[0]; // Get the first sheet
+    const sheetData = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], { header: 1 }); // Convert to JSON
+    displayTable(sheetData);
+  };
+
+  reader.readAsArrayBuffer(file);
+}
+
+function displayTable(data) {
+  const table = document.getElementById('data-table');
+  table.innerHTML = ''; // Clear any existing content
+
+  data.forEach((row, rowIndex) => {
+    const rowElement = document.createElement('tr');
+    row.forEach((cell) => {
+      const cellElement = document.createElement(rowIndex === 0 ? 'th' : 'td'); // Use <th> for header row
+      cellElement.textContent = cell || ''; // Add cell content
+      rowElement.appendChild(cellElement);
+    });
+    table.appendChild(rowElement);
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /**
    * Navmenu Scrollspy
    */

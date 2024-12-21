@@ -1,293 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Departments Details</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details - Append Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/favicon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/favicon.png" rel="apple-touch-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-</head>
+  <body class="portfolio-details-page">
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid position-relative d-flex align-items-center justify-content-between"
+      >
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="assets/img/rccgIcon.png" alt="" />
+          <h6 class="sitename">
+            RCCG LAGOS <br />
+            PROVINCE 48
+          </h6>
+          <span>.</span>
+        </a>
 
-<body class="portfolio-details-page">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#home" class="active">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#departments">Departments</a></li>
+            <li><a href="index.html#events">Event</a></li>
+            <li><a href="index.html#ministries">Ministries</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+        <a class="btn-getstarted" href="index.html#contact">Contact</a>
+      </div>
+    </header>
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/rccgIcon.png" alt="">
-        <h6 class="sitename">RCCG LAGOS <br>
-          PROVINCE 48</h6><span>.</span>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html#home" class="active">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#departments">Departments</a></li>
-          <li><a href="index.html#events">Event</a></li>
-          <li><a href="index.html#ministries">Ministries</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Departments Details</h1>
-              <p class="mb-0">Discover our church departments, where every <br> ministry serves to grow faith, build community, and share God's love.
-              </p>
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title" data-aos="fade">
+        <div class="heading">
+          <div class="container">
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-lg-8">
+                <h1>Departments Details</h1>
+                <p class="mb-0">
+                  Discover our church departments, where every <br />
+                  ministry serves to grow faith, build community, and share
+                  God's love.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+        <nav class="breadcrumbs">
+          <div class="container">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li class="current">Departments Details</li>
+            </ol>
+          </div>
+        </nav>
       </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Departments Details</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
+      <!-- End Page Title -->
 
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="portfolio-details-slider swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "navigation": {
-                "nextEl": ".swiper-button-next",
-                "prevEl": ".swiper-button-prev"
-              },
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
+      <!-- Portfolio Details Section -->
+      <section id="portfolio-details" class="portfolio-details section">
+        <div class="container" data-aos="fade-up">
+          <div class="portfolio-details-slider swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "navigation": {
+                  "nextEl": ".swiper-button-next",
+                  "prevEl": ".swiper-button-prev"
+                },
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                }
               }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
+            </script>
+            <div class="swiper-wrapper align-items-center">
               <div class="swiper-slide">
-                <iframe width="100%" height="378" src="https://www.youtube.com/embed/O2vTsRKKhds" 
-                title="Come to Jesus - RCCG Lagos Province 48 Mass Choir" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              </iframe>
-              <a
-              href="https://www.youtube.com/watch?v=O2vTsRKKhds&t=67s"
-              target="_blank"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-              <!-- This is the clickable overlay -->
+                <iframe
+                  width="100%"
+                  height="378"
+                  src="https://www.youtube.com/embed/O2vTsRKKhds"
+                  title="Come to Jesus - RCCG Lagos Province 48 Mass Choir"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                >
+                </iframe>
+                <a
+                  href="https://www.youtube.com/watch?v=O2vTsRKKhds&t=67s"
+                  target="_blank"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                  "
+                >
+                  <!-- This is the clickable overlay -->
+                </a>
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg"
+                  alt=""
+                />
+              </div>
+
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+          <div class="row justify-content-between gy-4 mt-4">
+            <div class="col-lg-8" data-aos="fade-up">
+              <div class="portfolio-description">
+                <h2>You are welcome to join our Departments</h2>
+                <p>
+                  Discover our church departments, where every <br />
+                  ministry serves to grow faith, build community, and share
+                  God's love.
+                </p>
+                <p>
+                  <span style="display: block">
+                    <strong>Musical Unit</strong></span
+                  >
+                  Use your voice or instrument to lead others in heartfelt
+                  worship and praise to glorify God.
+                </p>
+                <p>
+                  <span style="display: block">
+                    <strong>Sanitation Unit</strong></span
+                  >
+                  Serve with excellence by ensuring God's house remains clean,
+                  welcoming, and ready for worship.
+                </p>
+                <p>
+                  <span style="display: block">
+                    <strong> Counselling Unit</strong></span
+                  >
+                  Offer guidance, encouragement, and hope as you help others
+                  navigate life's challenges through faith.
+                </p>
+                <p>
+                  <span style="display: block">
+                    <strong
+                      >Directorate of Christian Education Unit (DCE)
+                      Unit</strong
+                    ></span
+                  >
+                  Teach and nurture believers, guiding them to grow deeper in
+                  their faith and knowledge of God.
+                </p>
+                <p>
+                  <span style="display: block">
+                    <strong>Prayer Unit</strong></span
+                  >
+                  Stand in the gap through intercession and watch God move as we
+                  seek His will together in prayer.
+                </p>
+                <p>
+                  <span style="display: block">
+                    <strong>Drama Unit</strong></span
+                  >
+                  Bring God's Word to life through powerful, creative
+                  storytelling and impactful performances.
+                </p>
+                <p>
+                  <span style="display: block">
+                    <strong>Usher Unit</strong></span
+                  >
+                  Be the first smile people see as you welcome them into God's
+                  presence with love and grace.
+                </p>
+                <p>
+                  <span style="display: block">
+                    <strong>Security Unit</strong></span
+                  >
+                  Serve faithfully by ensuring a safe and peaceful environment
+                  for worship and ministry.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
+              <div class="portfolio-info">
+                <h3>Departments information</h3>
+                <ul>
+                  <li>
+                    <strong>Categories</strong>
+                    Musical/Sanitation/Counselling/DCE/Prayer/<br />Drama/Usher/Security
+                    Units
+                  </li>
+                  <li><strong>Interested?</strong></li>
+                  <li>
+                    <a
+                      href="index.html#contact"
+                      class="btn-visit align-self-start"
+                      >Join</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Details Section -->
+    </main>
+
+    <footer id="footer" class="footer position-relative light-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-about">
+            <a
+              href="index.html"
+              class="logo d-flex align-items-center me-auto me-xl-0"
+            >
+              <img src="assets/img/rccgIcon.png" alt="" />
+              <h6 class="sitename">
+                RCCG LAGOS <br />
+                PROVINCE 48
+              </h6>
             </a>
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" alt="">
-            </div>
-
-          </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-        <div class="row justify-content-between gy-4 mt-4">
-
-          <div class="col-lg-8" data-aos="fade-up">
-            <div class="portfolio-description">
-              <h2>You are welcome to join our Departments</h2>
-              <p>Discover our church departments, where every <br> ministry serves to grow faith, build community, and share God's love.
-              </p>
-              <p>
-                <span style="display: block"> <strong>Musical Unit</strong></span>
-                Use your voice or instrument to lead others in heartfelt worship and praise to glorify God.
-              </p>
-              <p>
-                <span style="display: block"> <strong>Sanitation Unit</strong></span>
-                Serve with excellence by ensuring God's house remains clean, welcoming, and ready for worship.
-              </p>
-                <p>
-                  <span style="display: block"> <strong> Counselling Unit</strong></span>
-                  Offer guidance, encouragement, and hope as you help others navigate life's challenges through faith.
-                </p>
-                <p>
-                  <span style="display: block"> <strong>Directorate of Christian Education Unit (DCE) Unit</strong></span>
-                  Teach and nurture believers, guiding them to grow deeper in their faith and knowledge of God.
-                </p>
-                <p>
-                  <span style="display: block"> <strong>Prayer Unit</strong></span>
-                  Stand in the gap through intercession and watch God move as we seek His will together in prayer.
-                </p>
-                <p>
-                  <span style="display: block"> <strong>Drama Unit</strong></span>
-                  Bring God's Word to life through powerful, creative storytelling and impactful performances.
-                </p>
-                <p>
-                  <span style="display: block"> <strong>Usher Unit</strong></span>
-                  Be the first smile people see as you welcome them into God's presence with love and grace.
-                </p>
-                <p>
-                  <span style="display: block"> <strong>Security Unit</strong></span>
-                  Serve faithfully by ensuring a safe and peaceful environment for worship and ministry.
-                </p>
-                
-              
-
-            </div>
-          </div>
-
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
-            <div class="portfolio-info">
-              <h3>Departments information</h3>
-              <ul>
-                <li><strong>Categories</strong> Musical/Sanitation/Counselling/DCE/Prayer/<br>Drama/Usher/Security Units </li>
-                <li><strong>Interested?</strong>
-                <li><a href="index.html#contact" class="btn-visit align-self-start">Join</a></li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Portfolio Details Section -->
-
-  </main>
-
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-            <img src="assets/img/rccgIcon.png" alt="">
-            <h6 class="sitename">RCCG LAGOS <br>
-              PROVINCE 48</h6>
-          </a>
-          <p>Discover our beliefs about God, Jesus, the Bible, humanity, and key aspects of our faith.
-            Grounded in Scripture, these truths shape who we are and guide our church's mission.</p>
-          <!-- <div class="social-links d-flex mt-4">
+            <p>
+              Discover our beliefs about God, Jesus, the Bible, humanity, and
+              key aspects of our faith. Grounded in Scripture, these truths
+              shape who we are and guide our church's mission.
+            </p>
+            <!-- <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
             <a href=""><i class="bi bi-instagram"></i></a>
             <a href=""><i class="bi bi-linkedin"></i></a>
           </div> -->
-        </div>
+          </div>
 
-        <div class="col-lg-3 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="index.html#about">About us</a></li>
-            <li><a href="index.html#departments">Departments</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
+          <div class="col-lg-3 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="index.html#about">About us</a></li>
+              <li><a href="index.html#departments">Departments</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
 
-        <div class="col-lg-4 col-6 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-            <p>RCCG LP48 Provincial Headquarters, RCCG Olive Tree Parish,
-            Main Arterial Road, Banana Island, Ikoyi, Lagos.</p>
+          <div class="col-lg-4 col-6 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              RCCG LP48 Provincial Headquarters, RCCG Olive Tree Parish, Main
+              Arterial Road, Banana Island, Ikoyi, Lagos.
+            </p>
             <!-- <p class="mt-4">
               <strong>Phone:</strong> <span>+2347037629837</span>
             </p> -->
-            <p class="mt-4"><strong>Email:</strong> <span>rccglp48adm@gmail.com</span></p>
+            <p class="mt-4">
+              <strong>Email:</strong> <span>rccglp48adm@gmail.com</span>
+            </p>
+          </div>
         </div>
-
       </div>
-    </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="sitename">RCCG LAGOS PROVINCE 48</strong> <span>All Rights Reserved.</span></p>
-    </div>
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="sitename">RCCG LAGOS PROVINCE 48</strong>
+          <span>All Rights Reserved.</span>
+        </p>
+      </div>
+    </footer>
 
-  </footer>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

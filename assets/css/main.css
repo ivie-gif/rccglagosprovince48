@@ -1,15 +1,3 @@
-/**
-* Template Name: Append
-* Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -338,16 +326,65 @@ h6 {
   }
 }
 
+
+
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ensures full width */
+  height: 60px; /* Adjust to match your navbar height */
+  background-color: var(--navbar-bg, #fff); /* Optional: Navbar background color */
+  z-index: 1000; /* Keeps navbar above other content */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px; /* Optional: Padding for content */
+  border-bottom: 1px solid #ddd; /* Optional: Subtle bottom border */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
-  .mobile-nav-toggle {
+  /* .mobile-nav-toggle {
     color: var(--nav-color);
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
-  }
+  } */
+
+    .mobile-nav-toggle {
+      color: var(--nav-color);
+      font-size: 28px;
+      line-height: 0;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
 
   .navmenu {
     padding: 0;
