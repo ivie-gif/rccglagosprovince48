@@ -7,7 +7,7 @@ exit_with_error() {
 
 echo $1
 
-cd /home/tope/THEVARTECH_APPS/RCCG_Lagos_Provice_48/$1/
+cd /home/tope/THEVARTECH_APPS/RCCG_Lagos_Provice_48/$1/server
 npm install --silent
 cd ..
 cd startup
