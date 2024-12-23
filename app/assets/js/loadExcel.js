@@ -17,42 +17,44 @@ async function loadExcelFile() {
     headers = sheetData[0]; // First row as headers
     originalData = sheetData.slice(1); // Remaining rows as data
 
-    populateDropdown(originalData); // Populate the location dropdown
     displayTable([headers, ...originalData]); // Display the full table
+    addSearchBar(); // Add the search bar for filtering
 }
 
-// Function to populate the dropdown
-function populateDropdown(data) {
-    const locationDropdown = document.getElementById('location-dropdown');
-    const locations = [...new Set(data.map(row => row[5]))]; // Assuming "Church Address" is in column index 2
+// Function to add a search bar
+function addSearchBar() {
+    const searchBar = document.getElementById('location-search-bar');
 
-    // Add default "All Locations" option
-    const defaultOption = document.createElement('option');
-    defaultOption.value = '';
-    defaultOption.textContent = 'All Locations';
-    locationDropdown.appendChild(defaultOption);
+    // Event listener for filtering data based on search input
+    searchBar.addEventListener('input', (event) => {
+        const searchTerm = event.target.value.toLowerCase(); // Convert search term to lowercase
+        const filteredData = searchTerm
+            ? originalData.filter(row => row[5]?.toLowerCase().includes(searchTerm)) // Filter based on column index 5 (location)
+            : originalData; // Show all data if the search term is empty
 
-    // Add unique locations to the dropdown
-    locations.forEach(location => {
-        const option = document.createElement('option');
-        option.value = location;
-        option.textContent = location;
-        locationDropdown.appendChild(option);
+        // If no matching data, show "No data found"
+        if (filteredData.length === 0) {
+            displayNoDataMessage();
+        } else {
+            // Re-display the table with filtered data
+            displayTable([headers, ...filteredData]); // Include headers
+        }
     });
-
-    // Add event listener for filtering
-    locationDropdown.addEventListener('change', filterTableByLocation);
 }
 
-// Function to filter the table by selected location
-function filterTableByLocation() {
-    const selectedLocation = document.getElementById('location-dropdown').value;
-    const filteredData = selectedLocation
-        ? originalData.filter(row => row[5] === selectedLocation) // Filter based on column index 2
-        : originalData; // Show all data if no location is selected
+// Function to display "No data found" message
+function displayNoDataMessage() {
+    const table = document.getElementById('data-table');
+    table.innerHTML = ''; // Clear any existing content
 
-    // Re-display the table with filtered data
-    displayTable([headers, ...filteredData]); // Include headers
+    const rowElement = document.createElement('tr');
+    const cellElement = document.createElement('td');
+    cellElement.textContent = 'No Location Found';
+    cellElement.colSpan = headers.length; // Span across all columns
+    cellElement.style.textAlign = 'center'; // Center align the text
+    rowElement.appendChild(cellElement);
+
+    table.appendChild(rowElement);
 }
 
 // Function to display the table

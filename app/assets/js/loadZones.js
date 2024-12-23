@@ -21,7 +21,8 @@ async function loadExcelFile1() {
         zoneHQHeaders = sheetData[0];
         zoneHQData = sheetData.slice(1);
 
-        populateDropdown('zoneHQ-dropdown', zoneHQData, 4); // Populate dropdown for Church Address (column index 4)
+        // Populate search input field and display table
+        populateSearchInput('zoneHQ-search', zoneHQData, 4); // For Church Address (column index 4)
         displayTable1([zoneHQHeaders, ...zoneHQData]);
     } catch (error) {
         console.error('Error loading LP48_Zones.xlsx:', error);
@@ -41,56 +42,57 @@ async function loadExcelFile2() {
         zoneAreasHeaders = sheetData[0];
         zoneAreasData = sheetData.slice(1);
 
-        populateDropdown('zoneAreas-dropdown', zoneAreasData, 4); // Populate dropdown for Church Address (column index 4)
+        // Populate search input field and display table
+        populateSearchInput('zoneAreas-search', zoneAreasData, 4); // For Church Address (column index 4)
         displayTable2([zoneAreasHeaders, ...zoneAreasData]);
     } catch (error) {
         console.error('Error loading Areas_in_zones.xlsx:', error);
     }
 }
 
-// Function to populate a dropdown with unique values from a specific column
-function populateDropdown(dropdownId, data, columnIndex) {
-    const dropdown = document.getElementById(dropdownId);
-    dropdown.innerHTML = ''; // Clear existing options
+// Function to populate a search input field
+function populateSearchInput(searchId, data, columnIndex) {
+    const searchInput = document.getElementById(searchId);
+    searchInput.value = ''; // Clear existing input value
 
-    // Collect unique values from the specified column
-    const uniqueValues = [...new Set(data.map(row => row[columnIndex]).filter(Boolean))];
-
-    // Add default "All" option
-    const defaultOption = document.createElement('option');
-    defaultOption.value = '';
-    defaultOption.textContent = 'All Locations';
-    dropdown.appendChild(defaultOption);
-
-    // Add unique values to the dropdown
-    uniqueValues.forEach(value => {
-        const option = document.createElement('option');
-        option.value = value;
-        option.textContent = value;
-        dropdown.appendChild(option);
-    });
-
-    // Attach event listener for filtering
-    dropdown.addEventListener('change', () => filterTable(dropdownId));
+    // Attach event listener for typing search term
+    searchInput.addEventListener('input', () => filterTable(searchId, data, columnIndex));
 }
 
-// Function to filter the table based on the selected dropdown value
-function filterTable(dropdownId) {
-    if (dropdownId === 'zoneHQ-dropdown') {
-        const selectedValue = document.getElementById('zoneHQ-dropdown').value;
-        const filteredData = selectedValue
-            ? zoneHQData.filter(row => row[4] === selectedValue) // Filter by Church Address (column index 4)
-            : zoneHQData; // Show all data if no value is selected
+// Function to filter the table based on the search term
+function filterTable(searchId, data, columnIndex) {
+    const searchTerm = document.getElementById(searchId).value.toLowerCase().trim();
+    
+    // Filter data based on search term in the specified column
+    const filteredData = searchTerm
+        ? data.filter(row => row[columnIndex]?.toLowerCase().includes(searchTerm)) // Filter by search term
+        : data; // Show all data if no search term is entered
 
-        displayTable1([zoneHQHeaders, ...filteredData]);
-    } else if (dropdownId === 'zoneAreas-dropdown') {
-        const selectedValue = document.getElementById('zoneAreas-dropdown').value;
-        const filteredData = selectedValue
-            ? zoneAreasData.filter(row => row[4] === selectedValue) // Filter by Church Address (column index 4)
-            : zoneAreasData; // Show all data if no value is selected
-
-        displayTable2([zoneAreasHeaders, ...filteredData]);
+    // Display the filtered table or show "No Location Found"
+    if (filteredData.length === 0) {
+        displayNoLocationFound(searchId);
+    } else {
+        hideNoLocationFound(searchId);
+        if (searchId === 'zoneHQ-search') {
+            displayTable1([zoneHQHeaders, ...filteredData]);
+        } else if (searchId === 'zoneAreas-search') {
+            displayTable2([zoneAreasHeaders, ...filteredData]);
+        }
     }
+}
+
+// Function to display "No Location Found" message
+function displayNoLocationFound(searchId) {
+    const tableId = searchId === 'zoneHQ-search' ? 'data-table-1' : 'data-table-2';
+    const table = document.getElementById(tableId);
+    table.innerHTML = `<tr><td colspan="100%" class="no-location-found text-center">No Location Found</td></tr>`;
+}
+
+// Function to hide "No Location Found" message
+function hideNoLocationFound(searchId) {
+    const tableId = searchId === 'zoneHQ-search' ? 'data-table-1' : 'data-table-2';
+    const table = document.getElementById(tableId);
+    table.innerHTML = ''; // Clear any previous message
 }
 
 // Function to display the first table
